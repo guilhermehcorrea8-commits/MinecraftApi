@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Web Api 29-07 Mine.props" />
+</Project>

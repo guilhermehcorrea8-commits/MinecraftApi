@@ -1,0 +1,6 @@
+@Web_Api_29_07_Mine_HostAddress = http://localhost:5254
+
+GET {{Web_Api_29_07_Mine_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

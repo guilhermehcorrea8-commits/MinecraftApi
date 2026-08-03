@@ -86,7 +86,7 @@ Relacionamentos implementados:
 Clone o projeto
 
 ```bash
-git clone https://github.com/SEU_USUARIO/MinecraftApi.git
+git clone https://github.com/guilhermehcorrea8-commits/MinecraftApi.git
 ```
 
 Entre na pasta

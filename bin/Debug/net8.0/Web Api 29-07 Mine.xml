@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web Api 29-07 Mine</name>
+    </assembly>
+    <members>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BiomasController.Get">
+            <summary>
+            Lista todos os biomas.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BiomasController.Get(System.Int32)">
+            <summary>
+            Busca um bioma pelo ID.
+            </summary>
+            <param name="id">ID do bioma.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BiomasController.Post(Web_Api_29_07_Mine.DTOs.BiomaRequestDTO)">
+            <summary>
+            Cadastra um novo bioma.
+            </summary>
+            <param name="dto">Dados do bioma.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BiomasController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.BiomaRequestDTO)">
+            <summary>
+            Atualiza um bioma existente.
+            </summary>
+            <param name="id">ID do bioma.</param>
+            <param name="dto">Novos dados.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BiomasController.Delete(System.Int32)">
+            <summary>
+            Remove um bioma.
+            </summary>
+            <param name="id">ID do bioma.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BlocosController.Get">
+            <summary>
+            Lista todos os blocos.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BlocosController.Get(System.Int32)">
+            <summary>
+            Busca um bloco pelo ID.
+            </summary>
+            <param name="id">ID do bloco.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BlocosController.Post(Web_Api_29_07_Mine.DTOs.BlocoRequestDTO)">
+            <summary>
+            Cadastra um novo bloco.
+            </summary>
+            <param name="dto">Dados do bloco.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BlocosController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.BlocoRequestDTO)">
+            <summary>
+            Atualiza um bloco existente.
+            </summary>
+            <param name="id">ID do bloco.</param>
+            <param name="dto">Novos dados.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.BlocosController.Delete(System.Int32)">
+            <summary>
+            Remove um bloco.
+            </summary>
+            <param name="id">ID do bloco.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.DashboardController.GetDashboard">
+            <summary>
+            Retorna estatísticas gerais da API.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.DashboardController.Ranking">
+            <summary>
+            Ranking dos jogadores.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.EncantamentosController.Get">
+            <summary>
+            Lista todos os encantamentos.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.EncantamentosController.Get(System.Int32)">
+            <summary>
+            Busca um encantamento pelo ID.
+            </summary>
+            <param name="id">ID do encantamento.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.EncantamentosController.Post(Web_Api_29_07_Mine.DTOs.EncantamentoRequestDTO)">
+            <summary>
+            Cadastra um novo encantamento.
+            </summary>
+            <param name="dto">Dados do encantamento.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.EncantamentosController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.EncantamentoRequestDTO)">
+            <summary>
+            Atualiza um encantamento existente.
+            </summary>
+            <param name="id">ID do encantamento.</param>
+            <param name="dto">Novos dados.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.EncantamentosController.Delete(System.Int32)">
+            <summary>
+            Remove um encantamento.
+            </summary>
+            <param name="id">ID do encantamento.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ItensController.Get">
+            <summary>
+            Lista todos os itens.
+            </summary>
+            <returns>Lista de itens cadastrados.</returns>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ItensController.Get(System.Int32)">
+            <summary>
+            Busca um item pelo ID.
+            </summary>
+            <param name="id">ID do item.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ItensController.Post(Web_Api_29_07_Mine.DTOs.ItemRequestDTO)">
+            <summary>
+            Cadastra um novo item.
+            </summary>
+            <param name="dto">Dados do item.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ItensController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.ItemRequestDTO)">
+            <summary>
+            Atualiza um item existente.
+            </summary>
+            <param name="id">ID do item.</param>
+            <param name="dto">Novos dados.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ItensController.Delete(System.Int32)">
+            <summary>
+            Remove um item.
+            </summary>
+            <param name="id">ID do item.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MobsController.Get">
+            <summary>
+            Lista todos os mobs.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MobsController.Get(System.Int32)">
+            <summary>
+            Busca um mob pelo ID.
+            </summary>
+            <param name="id">ID do mob.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MobsController.Post(Web_Api_29_07_Mine.DTOs.MobRequestDTO)">
+            <summary>
+            Cadastra um novo mob.
+            </summary>
+            <param name="dto">Dados do mob.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MobsController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.MobRequestDTO)">
+            <summary>
+            Atualiza um mob existente.
+            </summary>
+            <param name="id">ID do mob.</param>
+            <param name="dto">Novos dados.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MobsController.Delete(System.Int32)">
+            <summary>
+            Remove um mob.
+            </summary>
+            <param name="id">ID do mob.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MundosController.Get">
+            <summary>
+            Lista todos os mundos.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MundosController.Get(System.Int32)">
+            <summary>
+            Busca um mundo pelo ID.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MundosController.Post(Web_Api_29_07_Mine.DTOs.MundoRequestDTO)">
+            <summary>
+            Cadastra um novo mundo.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MundosController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.MundoRequestDTO)">
+            <summary>
+            Atualiza um mundo.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.MundosController.Delete(System.Int32)">
+            <summary>
+            Remove um mundo.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.GetPlayers">
+            <summary>
+            Lista todos os jogadores cadastrados.
+            </summary>
+            <returns>Lista de jogadores.</returns>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.GetPlayer(System.Int32)">
+            <summary>
+            Busca um jogador pelo ID.
+            </summary>
+            <param name="id">ID do jogador.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.Buscar(System.String)">
+            <summary>
+            Pesquisa jogadores pelo nickname.
+            </summary>
+            <param name="nickname">Nome do jogador.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.Post(Web_Api_29_07_Mine.DTOs.PlayerRequestDTO)">
+            <summary>
+            Cadastra um novo jogador.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.Put(System.Int32,Web_Api_29_07_Mine.DTOs.PlayerRequestDTO)">
+            <summary>
+            Atualiza um jogador existente.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.PlayersController.Delete(System.Int32)">
+            <summary>
+            Remove um jogador.
+            </summary>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.ProfilesController.Get(System.String)">
+            <summary>
+            Consulta um jogador na Mojang API.
+            </summary>
+            <param name="username">Nickname do jogador.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.SkinController.GetSkin(System.String)">
+            <summary>
+            Retorna a skin, avatar e UUID de um jogador.
+            </summary>
+            <param name="username">Nickname do jogador.</param>
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Controllers.WikiController.Buscar(System.String)">
+            <summary>
+            Pesquisa um termo na Minecraft Wiki.
+            </summary>
+            <param name="termo">Termo pesquisado.</param>
+        </member>
+        <member name="T:Web_Api_29_07_Mine.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

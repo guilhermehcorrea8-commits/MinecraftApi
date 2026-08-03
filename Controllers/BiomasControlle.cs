@@ -69,7 +69,7 @@ public class BiomasController : ControllerBase
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult> Post(BiomaRequestDTO dto)
+    public async Task<ActionResult<BiomaResponseDTO>> Post(BiomaRequestDTO dto)
     {
         var bioma = new Bioma
         {
@@ -80,10 +80,18 @@ public class BiomasController : ControllerBase
         };
 
         _context.Biomas.Add(bioma);
-
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(Get), new { id = bioma.Id }, bioma);
+        var responseDto = new BiomaResponseDTO
+        {
+            Id = bioma.Id,
+            Nome = bioma.Nome,
+            Temperatura = bioma.Temperatura,
+            Chove = bioma.Chove,
+            ImagemUrl = bioma.ImagemUrl
+        };
+
+        return CreatedAtAction(nameof(Get), new { id = bioma.Id }, responseDto);
     }
     /// <summary>
     /// Atualiza um bioma existente.

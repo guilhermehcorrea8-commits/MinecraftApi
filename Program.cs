@@ -4,16 +4,7 @@ using Web_Api_29_07_Mine.Context;
 using Web_Api_29_07_Mine.Services;
 using System.Reflection;
 
-
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddSwaggerGen(options =>
-{
-    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-
-    options.IncludeXmlComments(xmlPath);
-});
 
 // Controllers
 builder.Services.AddControllers();
@@ -23,15 +14,15 @@ builder.Services.AddDbContext<MinecraftContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// HttpClient
+// HttpClient Services
 builder.Services.AddHttpClient<MojangService>();
 builder.Services.AddHttpClient<WikiService>();
 
+// Singleton Services
 builder.Services.AddSingleton<SkinService>();
 
-// Swagger
+// Swagger / OpenAPI (Configuração Única)
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -49,6 +40,14 @@ builder.Services.AddSwaggerGen(options =>
             Name = "MIT"
         }
     });
+
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+    if (File.Exists(xmlPath))
+    {
+        options.IncludeXmlComments(xmlPath);
+    }
 });
 
 builder.Services.AddAuthorization();
@@ -56,7 +55,6 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 app.UseSwagger();
-
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minecraft API v1");
@@ -65,9 +63,7 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

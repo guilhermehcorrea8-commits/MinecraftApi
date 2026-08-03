@@ -63,7 +63,7 @@ public class BlocosController : ControllerBase
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult> Post(BlocoRequestDTO dto)
+    public async Task<ActionResult<BlocoResponseDTO>> Post(BlocoRequestDTO dto)
     {
         var bloco = new Bloco
         {
@@ -77,7 +77,17 @@ public class BlocosController : ControllerBase
         _context.Blocos.Add(bloco);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(Get), new { id = bloco.Id }, bloco);
+        var responseDto = new BlocoResponseDTO
+        {
+            Id = bloco.Id,
+            Nome = bloco.Nome,
+            Tipo = bloco.Tipo,
+            Resistencia = bloco.Resistencia,
+            Empilhavel = bloco.Empilhavel,
+            ImagemUrl = bloco.ImagemUrl
+        };
+
+        return CreatedAtAction(nameof(Get), new { id = bloco.Id }, responseDto);
     }
     /// <summary>
     /// Atualiza um bloco existente.

@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
-
-using System.Net.Http.Json;
 
 namespace Web_Api_29_07_Mine.Services
 {
@@ -14,12 +12,19 @@ namespace Web_Api_29_07_Mine.Services
         public WikiService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            
+            // Adiciona User-Agent exigido pelas APIs da Wiki
+            if (!_httpClient.DefaultRequestHeaders.Contains("User-Agent"))
+            {
+                _httpClient.DefaultRequestHeaders.Add("User-Agent", "MinecraftApi/1.0");
+            }
         }
 
         public async Task<string> SearchAsync(string termo)
         {
-            var url =
-                $"https://minecraft.wiki/api.php?action=opensearch&search={termo}&limit=1&format=json";
+            // Trata espaços e caracteres especiais no termo da busca
+            var termoEncoded = Uri.EscapeDataString(termo);
+            var url = $"https://minecraft.wiki/api.php?action=opensearch&search={termoEncoded}&limit=1&format=json";
 
             return await _httpClient.GetStringAsync(url);
         }

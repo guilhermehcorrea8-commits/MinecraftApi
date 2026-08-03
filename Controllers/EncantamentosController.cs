@@ -63,7 +63,7 @@ public class EncantamentosController : ControllerBase
         return Ok(encantamento);
     }
 
-    [HttpPost]/// <summary>
+    /// <summary>
               /// Cadastra um novo encantamento.
               /// </summary>
               /// <param name="dto">Dados do encantamento.</param>

@@ -253,5 +253,17 @@
         <member name="M:Web_Api_29_07_Mine.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Web_Api_29_07_Mine.Migrations.AddMinecraftEntities">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.AddMinecraftEntities.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.AddMinecraftEntities.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Web_Api_29_07_Mine.Migrations.AddMinecraftEntities.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

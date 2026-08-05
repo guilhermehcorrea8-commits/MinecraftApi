@@ -59,7 +59,7 @@ app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minecraft API v1");
     c.DocumentTitle = "Minecraft API";
-    c.RoutePrefix = "";
+    c.RoutePrefix = "swagger";
 });
 
 app.UseHttpsRedirection();

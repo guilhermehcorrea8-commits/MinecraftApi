@@ -101,16 +101,10 @@ Restaure os pacotes
 dotnet restore
 ```
 
-Crie o banco
-
-```bash
-dotnet ef database update
-```
-
 Execute
 
 ```bash
-dotnet run
+dotnet watch run
 ```
 
 ---

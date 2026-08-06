@@ -104,7 +104,7 @@ dotnet restore
 Execute
 
 ```bash
-dotnet watch run
+dotnet run
 ```
 
 ---
